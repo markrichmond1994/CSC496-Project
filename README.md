@@ -2,8 +2,6 @@
 Group project for CSC496 Cloud Computing
 
 Team:
-Mark Richmond
-Jared Thomas
-Zach Colangelo
+Mark Richmond, Jared Thomas, Zach Colangelo
 
 Description:
