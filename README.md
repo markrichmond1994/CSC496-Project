@@ -5,6 +5,7 @@ Team:
 Mark Richmond, Jared Thomas, Zachary Colangelo
 
 Description:
+A file management system that will be able to be accessed from anywhere while the server is running.
 
 Helpful links:
 https://github.com/sjiveson/nfs-server-alpine
