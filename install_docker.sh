@@ -9,6 +9,7 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose
 sudo apt-get install -y httping
 sudo apt-get install -y jq
 #setup client
+sudo apt-get install nfs-common
 sudo mkdir -p /mnt/sharedfolder_client
 sudo mount 192.168.100.5:/mnt/sharedfolder /mnt/sharedfolder_client
 
