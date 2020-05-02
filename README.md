@@ -9,7 +9,7 @@ We are going to deploy a network file management system (NFS) that will be able 
 
 Deliverable 2: https://docs.google.com/document/d/1tOxE7zdCn2zFyFqrqc-ufYagJLKc8zHxL1pv9HqOnbk/edit?usp=sharing
 
-Youtube demonstration: 
+Youtube demonstration: https://www.youtube.com/watch?v=o1Q66-Z9EJc&feature=youtu.be
 
 Helpful links:
 https://github.com/sjiveson/nfs-server-alpine | https://hub.docker.com/r/itsthenetwork/nfs-server-alpine/ | https://wiki.alpinelinux.org/wiki/Setting_up_a_nfs-server | https://kubernetes.io/docs/concepts/services-networking/connect-applications-service/
