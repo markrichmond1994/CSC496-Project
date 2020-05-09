@@ -1,4 +1,5 @@
 docker pull markrichmond1994/csc496-nfs:latest
+docker build -t nfs-ubuntu .
 docker run --privileged -it markrichmond1994/csc496-nfs:latest /bin/bash
 //psuedo terminal
 mkdir /exports 
