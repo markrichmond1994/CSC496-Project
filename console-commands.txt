@@ -1,12 +1,6 @@
 docker pull markrichmond1994/csc496-nfs:latest
-docker build -t nfs-ubuntu .
-docker run --privileged -it markrichmond1994/csc496-nfs:latest /bin/bash
-//psuedo terminal
-mkdir /exports 
-mkdir /exports/opt 
-mkdir /exports/etc 
-mount --bind /usr/local/opt /exports/opt 
-mount --bind /usr/local/etc /exports/etc 
-exportfs -o fsid=0,insecure,no_subtree_check gss/krb5p:/exports 
-exportfs -o rw,nohide,insecure,no_subtree_check gss/krb5p:/exports/opt 
-exportfs -o rw,nohide,insecure,no_subtree_check gss/krb5p:/exports/etc
+docker run --privileged --name myNFS markrichmond1994/csc496-nfs:latest /bin/bash
+
+sudo docker service create  –mount type=volume,volume-opt=o=addr=<//insert IP addr here//>, volume-opt=device=:/var/nfs,volume-opt=type=nfs,source=vol, target=/mount –replicas 3 –name nfsTest dockerimage
+
+sudo docker service ps nfsTest
