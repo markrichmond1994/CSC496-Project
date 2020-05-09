@@ -5,7 +5,15 @@ RUN apt-get install --assume-yes \
 RUN apt-get install --assume-yes \
     pkg-config \
     curl jq vim \
-    nfs-kernel-server
+    nfs-kernel-server \
+    
 
-RUN mkdir /var/nfs/general -p   
+
+RUN mkdir /var/nfs/general -p \
+    mkdir /export \
+    mkdir /export/users \
+    mount --bind /home/users /export/users
+
+service nfs-kernel-server restart
+    
 RUN chown nobody:nogroup /var/nfs/general
