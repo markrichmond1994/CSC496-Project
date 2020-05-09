@@ -1,2 +1,11 @@
 docker pull markrichmond1994/csc496-nfs:latest
 docker run --privileged -it markrichmond1994/csc496-nfs:latest /bin/bash
+//psuedo terminal
+mkdir /exports 
+mkdir /exports/opt 
+mkdir /exports/etc 
+mount --bind /usr/local/opt /exports/opt 
+mount --bind /usr/local/etc /exports/etc 
+exportfs -o fsid=0,insecure,no_subtree_check gss/krb5p:/exports 
+exportfs -o rw,nohide,insecure,no_subtree_check gss/krb5p:/exports/opt 
+exportfs -o rw,nohide,insecure,no_subtree_check gss/krb5p:/exports/etc
