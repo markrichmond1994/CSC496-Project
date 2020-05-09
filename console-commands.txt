@@ -1,0 +1,2 @@
+docker pull markrichmond1994/csc496-nfs:latest
+docker run --privileged -it markrichmond1994/csc496-nfs:latest /bin/bash
